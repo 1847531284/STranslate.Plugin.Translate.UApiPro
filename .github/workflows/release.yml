@@ -22,19 +22,11 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Build
+      - name: Build (auto-packages spkg via MSBuild target)
         run: dotnet build -c Release
-
-      - name: Package spkg
-        shell: pwsh
-        run: |
-          $src = "bin\Release"
-          $spkg = "STranslate.Plugin.Translate.UApiPro.spkg"
-          Compress-Archive -Path "$src\*" -DestinationPath "$spkg" -Force
-          Write-Host "Created: $spkg"
 
       - name: Upload to Release
         uses: softprops/action-gh-release@v2
         with:
-          files: STranslate.Plugin.Translate.UApiPro.spkg
+          files: bin/Release/plugins/STranslate.Plugin.Translate.UApiPro.spkg
           generate_release_notes: true

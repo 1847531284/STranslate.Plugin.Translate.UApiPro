@@ -38,11 +38,17 @@
 
 ```bash
 git clone https://github.com/xiaopeng66/STranslate.Plugin.Translate.UApiPro.git
-cd STranslate.Plugin.Translate.UApiPro
+cd STranslate.Plugin.Translate.UApiPro/STranslate.Plugin.Translate.UApiPro
 dotnet build -c Release
 ```
 
-编译产物位于 `bin/Release/net10.0-windows7.0/`，将其打包为 zip 后重命名为 `.spkg` 即可导入。
+Release 配置已启用自动打包（`EnableAutoPackage`），构建完成后 spkg 自动生成于：
+
+```
+bin/Release/plugins/STranslate.Plugin.Translate.UApiPro.spkg
+```
+
+直接将该 `.spkg` 文件导入 STranslate 即可。
 
 ## 配置说明
 
@@ -61,22 +67,31 @@ dotnet build -c Release
 
 ## 目录结构
 
+仓库采用嵌套布局（适配 STranslate 插件市场脚本，从 `{owner}/{repo}/main/{repo}/plugin.json` 读取元数据）：
+
 ```
-STranslate.Plugin.Translate.UApiPro/
-├── Languages/                # 多语言资源
-│   ├── en.xaml / en.json
-│   ├── zh-cn.xaml / zh-cn.json
-│   └── zh-tw.xaml / zh-tw.json
-├── View/
-│   ├── SettingsView.xaml     # 设置页 UI（SettingsCard 卡片）
-│   └── SettingsView.xaml.cs
-├── ViewModel/
-│   └── SettingsViewModel.cs  # 设置页逻辑（绑定、校验命令）
-├── Main.cs                   # 插件主类（翻译逻辑）
-├── Settings.cs               # 配置模型
-├── plugin.json               # 插件清单
-├── icon.png                  # 插件图标
-└── STranslate.Plugin.Translate.UApiPro.csproj
+STranslate.Plugin.Translate.UApiPro/              # 仓库根目录
+├── .github/
+│   └── workflows/
+│       └── release.yml                           # GitHub Actions 自动构建发布
+├── STranslate.Plugin.Translate.UApiPro/          # 插件源码目录
+│   ├── Languages/                                # 多语言资源
+│   │   ├── en.xaml / en.json
+│   │   ├── zh-cn.xaml / zh-cn.json
+│   │   └── zh-tw.xaml / zh-tw.json
+│   ├── View/
+│   │   ├── SettingsView.xaml                     # 设置页 UI（SettingsCard 卡片）
+│   │   └── SettingsView.xaml.cs
+│   ├── ViewModel/
+│   │   └── SettingsViewModel.cs                  # 设置页逻辑（绑定、校验命令）
+│   ├── Main.cs                                   # 插件主类（翻译逻辑）
+│   ├── Settings.cs                               # 配置模型
+│   ├── plugin.json                               # 插件清单
+│   ├── icon.png                                  # 插件图标
+│   └── STranslate.Plugin.Translate.UApiPro.csproj
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
 ## 许可证

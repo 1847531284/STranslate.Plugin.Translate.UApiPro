@@ -1,13 +1,44 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net10.0-windows7.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <RepositoryUrl>https://github.com/1847531284/STranslate.Plugin.Translate.UApiPro</RepositoryUrl>
+    <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
+
+    <TargetFramework>net10.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-    <Version>1.0.0</Version>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+
     <AssemblyName>STranslate.Plugin.Translate.UApiPro</AssemblyName>
     <RootNamespace>STranslate.Plugin.Translate.UApiPro</RootNamespace>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <!-- 编译后自动打包为 .spkg 插件包 -->
+    <EnableAutoPackage>true</EnableAutoPackage>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +47,7 @@
     <PackageReference Include="iNKORE.UI.WPF.Modern" Version="0.10.2.1" />
   </ItemGroup>
 
-  <!-- 将语言文件、图标、plugin.json 复制到输出目录 -->
+  <!-- 将语言文件、图标、plugin.json 复制到输出目录根部 -->
   <ItemGroup>
     <Content Include="Languages\*.*">
       <Generator>MSBuild:Compile</Generator>

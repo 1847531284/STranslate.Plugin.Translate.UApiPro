@@ -1,0 +1,40 @@
+name: Release Plugin
+
+# 推送 v 开头的 Tag（如 v1.0.0）时触发自动构建并发布 .spkg 到 GitHub Releases
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Build
+        run: dotnet build -c Release
+
+      - name: Package spkg
+        shell: pwsh
+        run: |
+          $src = "bin\Release"
+          $spkg = "STranslate.Plugin.Translate.UApiPro.spkg"
+          Compress-Archive -Path "$src\*" -DestinationPath "$spkg" -Force
+          Write-Host "Created: $spkg"
+
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: STranslate.Plugin.Translate.UApiPro.spkg
+          generate_release_notes: true

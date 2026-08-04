@@ -48,7 +48,7 @@ dotnet build -c Release
 
 | 配置项 | 说明 |
 |--------|------|
-| **API Key** | 在 [uapis.cn/console](https://uapis.cn/console) 获取。付费接口必填，免费层可不填。 |
+| **API Key** | 在 [uapis.cn/console](https://uapis.cn/console) 获取。付费接口必填，访客用户可不填。 |
 | **官网** | 点击设置页链接跳转 [uapis.cn](https://uapis.cn) 注册使用。 |
 | **校验** | 测试 API 连通性，发送翻译请求验证 Key 是否有效。 |
 

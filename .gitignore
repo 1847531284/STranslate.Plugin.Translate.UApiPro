@@ -1,0 +1,30 @@
+# 编译输出
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 构建产物
+*.spkg
+spkg_stage/
+artifacts/
+
+# 调试/临时文件
+*.baml
+xaml_out/
+baml_out/
+
+# 系统文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store

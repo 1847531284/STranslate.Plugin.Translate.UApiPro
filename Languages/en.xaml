@@ -1,0 +1,18 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_ApiKey">API Key</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_ApiKey_Description">Get it at uapis.cn/console (3500 credits each). Visitors get 1500 free credits per month.</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_ApiKey_Placeholder">Enter your API Key</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Website">Website</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Website_Description">Click the link below to visit the official website</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Verify">Verify</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Verify_Description">Test API connectivity</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Test">Verify</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Testing">Testing...</sys:String>
+    <sys:String x:Key="MissingApiKey">API Key is required.</sys:String>
+    <sys:String x:Key="UnsupportedTargetLang">Unsupported target language.</sys:String>
+
+</ResourceDictionary>

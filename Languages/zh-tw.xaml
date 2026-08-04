@@ -1,0 +1,18 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_ApiKey">API Key</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_ApiKey_Description">在 uapis.cn/console 取得（每3500積分），訪客每月擁有1500積分的免費額度</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_ApiKey_Placeholder">請輸入 API Key</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Website">官網</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Website_Description">點擊下方連結跳轉官網進行註冊使用</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Verify">校驗</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Verify_Description">測試 API 連通性</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Test">校驗</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Testing">測試中...</sys:String>
+    <sys:String x:Key="MissingApiKey">請先填寫 API Key。</sys:String>
+    <sys:String x:Key="UnsupportedTargetLang">不支援的目標語言。</sys:String>
+
+</ResourceDictionary>

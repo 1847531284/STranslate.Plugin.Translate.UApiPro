@@ -1,0 +1,10 @@
+{
+  "PluginID": "a2bf788ebe0d4ccd8b0db0d95c26f3fa",
+  "Name": "UApiPro",
+  "Description": "UApiPro translation plugin for STranslate",
+  "Author": "xiaopeng",
+  "Version": "1.0.0",
+  "Website": "https://uapis.cn",
+  "ExecuteFileName": "STranslate.Plugin.Translate.UApiPro.dll",
+  "IconPath": "icon.png"
+}

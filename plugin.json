@@ -4,7 +4,7 @@
   "Description": "UApiPro translation plugin for STranslate",
   "Author": "xiaopeng",
   "Version": "1.0.0",
-  "Website": "https://github.com/1847531284/STranslate.Plugin.Translate.UApiPro",
+  "Website": "https://github.com/xiaopeng66/STranslate.Plugin.Translate.UApiPro",
   "ExecuteFileName": "STranslate.Plugin.Translate.UApiPro.dll",
   "IconPath": "icon.png"
 }

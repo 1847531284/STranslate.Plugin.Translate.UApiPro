@@ -12,6 +12,9 @@
     <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Verify_Description">Test API connectivity</sys:String>
     <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Test">Verify</sys:String>
     <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Testing">Testing...</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Validate_Success">Success</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Validate_Timeout">Timeout</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Validate_Fail">Failed</sys:String>
     <sys:String x:Key="MissingApiKey">API Key is required.</sys:String>
     <sys:String x:Key="UnsupportedTargetLang">Unsupported target language.</sys:String>
 

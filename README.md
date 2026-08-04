@@ -29,7 +29,7 @@
 
 ### 方式一：下载编译好的 spkg（推荐）
 
-1. 前往 [Releases](https://github.com/1847531284/STranslate.Plugin.Translate.UApiPro/releases) 下载最新 `STranslate.Plugin.Translate.UApiPro.spkg`
+1. 前往 [Releases](https://github.com/xiaopeng66/STranslate.Plugin.Translate.UApiPro/releases) 下载最新 `STranslate.Plugin.Translate.UApiPro.spkg`
 2. 打开 STranslate → 设置 → 插件管理
 3. 点击「导入」→ 选择下载的 `.spkg` 文件
 4. 在翻译服务列表中添加「UApiPro」并填入 API Key（可选）
@@ -37,7 +37,7 @@
 ### 方式二：自行编译
 
 ```bash
-git clone https://github.com/1847531284/STranslate.Plugin.Translate.UApiPro.git
+git clone https://github.com/xiaopeng66/STranslate.Plugin.Translate.UApiPro.git
 cd STranslate.Plugin.Translate.UApiPro
 dotnet build -c Release
 ```

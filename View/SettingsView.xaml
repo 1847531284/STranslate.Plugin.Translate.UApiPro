@@ -37,7 +37,7 @@
                                 NavigateUri="https://uapis.cn" />
         </ui:SettingsCard>
 
-        <!-- ===== 卡片3：校验（AccentButton 样式 + IconAndText） ===== -->
+        <!-- ===== 卡片3：校验（AccentButton 样式 + IconAndText + 结果文本） ===== -->
         <ui:SettingsCard Header="{Binding VerifyLabel}"
                          Description="{Binding VerifyDescription}">
             <ui:SettingsCard.HeaderIcon>
@@ -46,9 +46,29 @@
             <ikw:SimpleStackPanel Orientation="Horizontal" Spacing="12">
                 <Button Command="{Binding TestCommand}"
                         Style="{StaticResource AccentButtonStyle}">
-                    <ui:IconAndText Content="{Binding TestButtonText}"
+                    <ui:IconAndText Content="{DynamicResource STranslate_Plugin_Translate_UApiPro_Test}"
                                     Icon="{x:Static ui:FluentSystemIcons.Play_24_Regular}" />
                 </Button>
+
+                <!-- 校验结果显示：与 OpenAICompetitive 一致，成功/失败时在按钮右侧显示文字 -->
+                <Border>
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="4" />
+                            <Setter Property="Padding" Value="8,4" />
+                            <Setter Property="Background" Value="{DynamicResource {x:Static ui:ThemeKeys.SystemFillColorAttentionBackgroundBrushKey}}" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ValidateResult}" Value="">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Border.Style>
+                    <TextBlock VerticalAlignment="Center"
+                               FontSize="{DynamicResource STControlFontSize12}"
+                               Foreground="{DynamicResource SystemFillColorSuccessBrush}"
+                               Text="{Binding ValidateResult}" />
+                </Border>
             </ikw:SimpleStackPanel>
         </ui:SettingsCard>
 

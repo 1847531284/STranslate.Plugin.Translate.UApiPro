@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
-    <RepositoryUrl>https://github.com/1847531284/STranslate.Plugin.Translate.UApiPro</RepositoryUrl>
+    <RepositoryUrl>https://github.com/xiaopeng66/STranslate.Plugin.Translate.UApiPro</RepositoryUrl>
     <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
 
     <TargetFramework>net10.0-windows</TargetFramework>

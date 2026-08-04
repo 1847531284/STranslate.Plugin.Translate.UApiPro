@@ -12,6 +12,9 @@
     <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Verify_Description">测试 API 连通性</sys:String>
     <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Test">校验</sys:String>
     <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Testing">测试中...</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Validate_Success">校验成功</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Validate_Timeout">校验超时</sys:String>
+    <sys:String x:Key="STranslate_Plugin_Translate_UApiPro_Validate_Fail">校验失败</sys:String>
     <sys:String x:Key="MissingApiKey">请先填写 API Key。</sys:String>
     <sys:String x:Key="UnsupportedTargetLang">不支持的目标语言。</sys:String>
 

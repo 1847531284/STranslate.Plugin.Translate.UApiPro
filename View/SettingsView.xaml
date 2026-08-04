@@ -12,45 +12,39 @@
              d:DesignWidth="800"
              mc:Ignorable="d">
 
-    <!-- 主容器：SimpleStackPanel 垂直堆叠，Spacing=12 控制卡片间距 -->
     <ikw:SimpleStackPanel Spacing="12">
-
-        <!-- ===== 卡片1：API Key（PasswordBox 直接绑定，无需代码后台） ===== -->
-        <ui:SettingsCard Header="{Binding ApiKeyLabel}"
-                         Description="{Binding ApiKeyDescription}">
+        <!-- API Key -->
+        <ui:SettingsCard Header="{DynamicResource STranslate_Plugin_Translate_UApiPro_ApiKey}"
+                         Description="{DynamicResource STranslate_Plugin_Translate_UApiPro_ApiKey_Description}">
             <ui:SettingsCard.HeaderIcon>
                 <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.Key_24_Regular}" />
             </ui:SettingsCard.HeaderIcon>
             <PasswordBox MinWidth="300"
                          plugin:PasswordBoxAssistant.Attach="True"
                          plugin:PasswordBoxAssistant.Password="{Binding ApiKey}"
-                         ui:ControlHelper.PlaceholderText="{Binding ApiKeyPlaceholder}" />
+                         ui:ControlHelper.PlaceholderText="{DynamicResource STranslate_Plugin_Translate_UApiPro_ApiKey_Placeholder}" />
         </ui:SettingsCard>
 
-        <!-- ===== 卡片2：官网（HyperlinkButton 超链接按钮） ===== -->
-        <ui:SettingsCard Header="{Binding WebsiteLabel}"
-                         Description="{Binding WebsiteDescription}">
+        <!-- 官网 -->
+        <ui:SettingsCard Header="{DynamicResource STranslate_Plugin_Translate_UApiPro_Website}"
+                         Description="{DynamicResource STranslate_Plugin_Translate_UApiPro_Website_Description}">
             <ui:SettingsCard.HeaderIcon>
                 <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.Globe_24_Regular}" />
             </ui:SettingsCard.HeaderIcon>
-            <ui:HyperlinkButton Content="https://uapis.cn"
-                                NavigateUri="https://uapis.cn" />
+            <ui:HyperlinkButton Content="https://uapis.cn" NavigateUri="https://uapis.cn" />
         </ui:SettingsCard>
 
-        <!-- ===== 卡片3：校验（AccentButton 样式 + IconAndText + 结果文本） ===== -->
-        <ui:SettingsCard Header="{Binding VerifyLabel}"
-                         Description="{Binding VerifyDescription}">
+        <!-- 校验 -->
+        <ui:SettingsCard Header="{DynamicResource STranslate_Plugin_Translate_UApiPro_Verify}"
+                         Description="{DynamicResource STranslate_Plugin_Translate_UApiPro_Verify_Description}">
             <ui:SettingsCard.HeaderIcon>
                 <ui:FontIcon Icon="{x:Static ui:FluentSystemIcons.CheckmarkCircle_24_Regular}" />
             </ui:SettingsCard.HeaderIcon>
             <ikw:SimpleStackPanel Orientation="Horizontal" Spacing="12">
-                <Button Command="{Binding TestCommand}"
-                        Style="{StaticResource AccentButtonStyle}">
+                <Button Command="{Binding TestCommand}" Style="{StaticResource AccentButtonStyle}">
                     <ui:IconAndText Content="{DynamicResource STranslate_Plugin_Translate_UApiPro_Test}"
                                     Icon="{x:Static ui:FluentSystemIcons.Play_24_Regular}" />
                 </Button>
-
-                <!-- 校验结果显示：与 OpenAICompetitive 一致，成功/失败时在按钮右侧显示文字 -->
                 <Border>
                     <Border.Style>
                         <Style TargetType="Border">
@@ -71,6 +65,5 @@
                 </Border>
             </ikw:SimpleStackPanel>
         </ui:SettingsCard>
-
     </ikw:SimpleStackPanel>
 </UserControl>

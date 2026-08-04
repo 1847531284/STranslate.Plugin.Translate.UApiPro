@@ -24,9 +24,10 @@ jobs:
 
       - name: Build (auto-packages spkg via MSBuild target)
         run: dotnet build -c Release
+        working-directory: STranslate.Plugin.Translate.UApiPro
 
       - name: Upload to Release
         uses: softprops/action-gh-release@v2
         with:
-          files: bin/Release/plugins/STranslate.Plugin.Translate.UApiPro.spkg
+          files: STranslate.Plugin.Translate.UApiPro/bin/Release/plugins/STranslate.Plugin.Translate.UApiPro.spkg
           generate_release_notes: true
